@@ -843,7 +843,7 @@ body{
 }
 
 .action-anime .card-image{
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     position: relative;
 }
@@ -932,15 +932,10 @@ body{
 
 /* Additional styles to replace inline styles */
 .card-image img {
+    width: 100%;
     height: 100%;
-    
-    background: linear-gradient(45deg, #1a1a1a, #333);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    position: relative;
-    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
 }
 
 .category-name a {
