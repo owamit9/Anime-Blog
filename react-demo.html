@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Animated Anime Cards Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+        
+        .demo-header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        }
+        
+        .demo-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .setup-instructions {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+        
+        .setup-instructions h2 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+        
+        .setup-instructions code {
+            background: #1a1a1a;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #ff6b6b;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .setup-instructions pre {
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 10px;
+            overflow-x: auto;
+            border: 1px solid #333;
+        }
+        
+        .react-root {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>🎌 React Animated Anime Cards</h1>
+        <p>Beautiful, interactive anime cards with smooth animations and hover effects</p>
+    </div>
+
+    <div class="setup-instructions">
+        <h2>🚀 How to Use This Component</h2>
+        
+        <h3>1. Install Dependencies</h3>
+        <pre><code>npm install react react-dom</code></pre>
+        
+        <h3>2. Import the Component</h3>
+        <pre><code>import AnimatedAnimeCard from './AnimatedAnimeCard.jsx';
+import './AnimatedAnimeCard.css';</code></pre>
+        
+        <h3>3. Use the Component</h3>
+        <pre><code>const animeData = {
+  title: "Demon Slayer: Kimetsu no Yaiba",
+  image: "images/demon_Slayer.jpg",
+  rating: 8.7,
+  year: 2019,
+  genres: ["Action", "Supernatural", "Historical"],
+  description: "Set in Taisho-era Japan, Tanjiro Kamado's peaceful life is shattered when demons kill his family and turn his sister, Nezuko, into a demon."
+};
+
+&lt;AnimatedAnimeCard anime={animeData} /&gt;</code></pre>
+        
+        <h3>4. Features Included</h3>
+        <ul>
+            <li>✨ Smooth entrance animations</li>
+            <li>🎯 Interactive hover effects</li>
+            <li>⭐ Animated star ratings</li>
+            <li>🎨 Gradient overlays</li>
+            <li>📱 Responsive design</li>
+            <li>🎭 Action buttons with shine effects</li>
+            <li>💫 Glow effects on hover</li>
+        </ul>
+    </div>
+
+    <!-- React Root for Demo -->
+    <div id="react-root" class="react-root">
+        <!-- React component will be rendered here -->
+    </div>
+
+    <!-- React and ReactDOM CDN for demo -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Demo Script -->
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const AnimatedAnimeCard = ({ anime }) => {
+            const [isVisible, setIsVisible] = useState(false);
+            const [isHovered, setIsHovered] = useState(false);
+            const [rating, setRating] = useState(0);
+
+            useEffect(() => {
+                const timer = setTimeout(() => setIsVisible(true), 100);
+                return () => clearTimeout(timer);
+            }, []);
+
+            useEffect(() => {
+                if (isVisible) {
+                    const targetRating = parseFloat(anime.rating);
+                    let currentRating = 0;
+                    const interval = setInterval(() => {
+                        currentRating += 0.1;
+                        if (currentRating >= targetRating) {
+                            currentRating = targetRating;
+                            clearInterval(interval);
+                        }
+                        setRating(currentRating);
+                    }, 50);
+                    return () => clearInterval(interval);
+                }
+            }, [isVisible, anime.rating]);
+
+            const renderStars = () => {
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 !== 0;
+                const stars = [];
+
+                for (let i = 0; i < fullStars; i++) {
+                    stars.push(<span key={i} className="star filled">⭐</span>);
+                }
+                
+                if (hasHalfStar) {
+                    stars.push(<span key="half" className="star half">⭐</span>);
+                }
+
+                const emptyStars = 10 - Math.ceil(rating);
+                for (let i = 0; i < emptyStars; i++) {
+                    stars.push(<span key={`empty-${i}`} className="star empty">☆</span>);
+                }
+
+                return stars;
+            };
+
+            return (
+                <div 
+                    className={`animated-anime-card ${isVisible ? 'visible' : ''} ${isHovered ? 'hovered' : ''}`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                >
+                    <div className="card-image-container">
+                        <img 
+                            src={anime.image} 
+                            alt={anime.title} 
+                            className="card-image"
+                        />
+                        <div className="image-overlay">
+                            <div className="overlay-content">
+                                <span className="watch-now">▶ Watch Now</span>
+                            </div>
+                        </div>
+                        <div className="rating-badge">
+                            {rating.toFixed(1)}/10
+                        </div>
+                    </div>
+
+                    <div className="card-content">
+                        <h3 className="card-title">{anime.title}</h3>
+                        
+                        <div className="genre-tags">
+                            {anime.genres.map((genre, index) => (
+                                <span key={index} className="genre-tag">{genre}</span>
+                            ))}
+                        </div>
+
+                        <p className="card-description">{anime.description}</p>
+
+                        <div className="card-meta">
+                            <div className="stars-container">
+                                {renderStars()}
+                            </div>
+                            <div className="year-badge">{anime.year}</div>
+                        </div>
+
+                        <div className="card-actions">
+                            <button className="action-btn primary">Add to List</button>
+                            <button className="action-btn secondary">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div className="card-glow"></div>
+                </div>
+            );
+        };
+
+        const AnimatedAnimeCardDemo = () => {
+            const animeList = [
+                {
+                    title: "Demon Slayer: Kimetsu no Yaiba",
+                    image: "images/demon_Slayer.jpg",
+                    rating: 8.7,
+                    year: 2019,
+                    genres: ["Action", "Supernatural", "Historical"],
+                    description: "Set in Taisho-era Japan, Tanjiro Kamado's peaceful life is shattered when demons kill his family and turn his sister, Nezuko, into a demon."
+                },
+                {
+                    title: "Jujutsu Kaisen",
+                    image: "images/jjk.jpg",
+                    rating: 8.6,
+                    year: 2020,
+                    genres: ["Action", "Supernatural", "Drama"],
+                    description: "Yuji Itadori eats a cursed object to save his friends and becomes a host to a powerful curse named Sukuna."
+                },
+                {
+                    title: "Spy x Family",
+                    image: "images/spy.jpg",
+                    rating: 8.5,
+                    year: 2022,
+                    genres: ["Comedy", "Action", "Slice of Life"],
+                    description: "A master spy must 'build a fake family' to infiltrate an elite school. Unbeknownst to him, his 'wife' is an assassin."
+                }
+            ];
+
+            return (
+                <div className="demo-container">
+                    <h2>Animated Anime Cards</h2>
+                    <div className="cards-grid">
+                        {animeList.map((anime, index) => (
+                            <AnimatedAnimeCard key={index} anime={anime} />
+                        ))}
+                    </div>
+                </div>
+            );
+        };
+
+        // Render the demo
+        ReactDOM.render(<AnimatedAnimeCardDemo />, document.getElementById('react-root'));
+    </script>
+
+    <!-- Include the CSS -->
+    <link rel="stylesheet" href="AnimatedAnimeCard.css">
+</body>
+</html>

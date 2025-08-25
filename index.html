@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ANIMEVERSE - Modern Anime Portal</title>
+</head>
+<body>
+    <!--navigation-->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ANIMEVERSE</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#underrated">Underrated</a></li>
+                <li><a href="#airing">Currently Airing</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#rankings">Rankings</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#community">Community</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!--  Sidebar -->
+    <div class="news-sidebar" id="newsSidebar">
+        <div class="news-header">
+            <h3>📰 Latest News</h3>
+            <button class="close-news" onclick="toggleNewsSidebar()">×</button>
+        </div>
+        <div class="news-content">
+            <div class="news-item">
+                <div class="news-date">22 Aug 2025</div>
+                <h4>Demon Slayer: Kimetsu no Yaiba Infinity Castle</h4>
+                <p>The first film in the Infinity Castle trilogy, Akaza Sairai, has been a massive success, earning 25.78 billion yen (approximately US$174.9 million) in 31 days, surpassing Makoto Shinkai's films in box office performance. However, a viewer was recently arrested in Japan on suspicion of theft and copyright infringement related to the film.</p>
+                <span class="news-tag">Breaking</span>
+            </div>
+
+
+            <div class="news-item">
+                <div class="news-date">22 Aug 2025</div>
+                <h4>One Piece Novel Heroines Anime</h4>
+                <p>An anime adaptation of the <b>One Piece novel HEROINES</b> was announced, focusing on female characters from the series, generating significant buzz among fans.</p>
+                <span class="news-tag">Announcement</span>
+            </div>
+
+
+            <div class="news-item">
+                <div class="news-date">22 Aug 2025</div>
+                <h4>One Piece Live Action Season 2</h4>
+                <p>Netflix confirms renewal for One Piece live-action series, production to begin in 2025.</p>
+                <span class="news-tag">Live Action</span>
+            </div>
+
+
+            <div class="news-item">
+                <div class="news-date">22 Aug 2025</div>
+                <h4>Aniplex Online Fest 2025</h4>
+                <p>Scheduled for the September 13, 2025, this event will feature over 20 game and anime projects, hosted by Sally Amaki and Hisanori Yoshida, and will stream globally for free.</p>
+                <span class="news-tag">Event</span>
+            </div>
+
+
+            <div class="news-item">
+                <div class="news-date">23 Aug 2025</div>
+                <h4>Sekiro: No Defeat</h4>
+                <p>An anime adaption of the Sekiro: Shadows Die Twice game, was announced at Gamescom 2025, witha teaser visual and promo video released.</p>
+                <span class="news-tag">New Anime</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Toggle Button -->
+    <button class="news-toggle" onclick="toggleNewsSidebar()">
+        📰 News
+    </button>
+
+    <!-- News Overlay -->
+    <div class="news-overlay" onclick="toggleNewsSidebar()"></div>
+
+    <!--hero section-->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Amazing Anime</h1>
+            <p>Explore thousands of anime series, connect with fellow fans, and dive into the ultimate anime experience.</p>
+            <a href="#featured" class="cta-button">Explore Now</a>
+        </div>
+    </section>
+
+    <!--feature anime-->
+    <section class="featured fade-in" id="featured">
+        <h2 class="section-title">Featured This Week</h2>
+        <div class="anime-grid">
+            <div class="anime-card">
+                <div class="card-image"><img src="images//1.jpg" alt="Demon Slayer (Kimetsu no Yaiba)"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Demon Slayer (Kimetsu no Yaiba)</h3>
+                    <p class="card-description"><b>Genre:</b> Action, Supernatural, Historical<br>
+                        <b>Plot:</b> Set in Taisho-era Japan, Tanjiro Kamado's peaceful life is shattered when demons kill his family and turn his sister, Nezuko, into a demon. Determined to turn her back and avenge his family, Tanjiro joins the Demon Slayer Corps, battling powerful demons with swordsmanship and breathing techniques. It's known for its stunning animation and emotional storytelling.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.7/10</div>
+                        <div class="year">2019</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/jjk.jpg" alt="Jujutsu Kaisen"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Jujutsu Kaisen</h3>
+                    <p class="card-description"><b>Genre:</b> Action, Supernatural, Drama<br>
+                    <b>Plot:</b> Yuji Itadori eats a cursed object to save his friends and becomes a host to a powerful curse named Sukuna. Now attending Jujutsu High, he learns to exorcise curses while balancing humanity and horror. Intense battles and emotional depth are highlights.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.6/10</div>
+                        <div class="year">2020</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/apothecary.jpg" alt="The Apothecary Diaries"></div>
+                <div class="card-content">
+                    <h3 class="card-title">The Apothecary Diaries</h3>
+                    <p class="card-description"><b>Genre:</b> Mystery, Romance, Drama<br>
+                    <b>Plot:</b> The story follows Maomao, a young apothecary sold into servitude in the emperor's palace, who uses her medical knowledge to solve mysteries and conspiracies within the inner court, often with the help of Jinshi, a handsome palace official..</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐6.9/10</div>
+                        <div class="year">2025</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/zenshu.jpg" alt="Zenshu"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Zenshu</h3>
+                    <p class="card-description"><b>Genre:</b> Comedy, Romance<br>
+                    <b>Plot:</b> After high school, Natsuko Hirose starts her career as an animator and quickly rises to director; her next project is a romantic comedy, but she's never been in love before!.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.6/10</div>
+                        <div class="year">2020</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/spy.jpg" alt="Spy x Family"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Spy x Family</h3>
+                    <p class="card-description"><b>Genre:</b> Comedy, Action<br><b>Plot:</b> A master spy must 'build a fake family' to infiltrate an elite school. Unbeknownst to him, his 'wife' is an assassin, and his 'daughter' is a telepath. Heartwarming and hilarious, this anime is a refreshing twist on family and espionage.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.5/10</div>
+                        <div class="year">2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/death.jpg" alt="Death Note"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Death Note</h3>
+                    <p class="card-description"><b>Genre:</b> Drama, Mystery, Thriller<br>
+                    <b>Plot:</b> Light Yagami, a genius student, finds a notebook that kills anyone whose name is written in it. He uses it to "cleanse" the world of criminals, but a mysterious detective known as "L" steps in to stop him. A battle of wits and justice unfolds.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐9.0/10</div>
+                        <div class="year">2006</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/akame.jpg" alt="Akame ga Kill"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Akame ga Kill</h3>
+                    <p class="card-description"><b>Genre:</b> Action, Adventure, Drama, Fantasy, Thriller<br>
+                    <b>Plot:</b> Follows Tatsumi, a young fighter who travels to the capital to earn money for his impoverished village. However, he quickly discovers the corruption that plagues the empire. He ends up joining Night Raid, a group of assassins fighting to overthrow the government.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐7.4/10</div>
+                        <div class="year">2014</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image">
+                    <img src="images/clover.jpg" alt="Black Clover"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Black Clover</h3>
+                    <p class="card-description"><b>Genre:</b> Action, Adventure, Comedy, Fantasy<br>
+                        <b>Plot:</b> Set in a world where magic is everything. Everyone is born with the ability to use magic - except Asta, an orphan who dreams of becoming the Wizard King, the strongest mage in the Clover Kingdom. Despite being magic-less, Asta gains a mysterious anti-magic grimoire that allows him to cancel out other magic.</p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.1/10</div>
+                        <div class="year">2017</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="underrated fade-in" id="underrated">
+        <h2 class="section-title">Underrated Anime</h2>
+        <div class="anime-grid">
+            <div class="anime-card">
+                <div class="card-image"><img src="images/zom 100.jpg" alt="Zom 100: Bucket List of the Dead"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Zom 100: Bucket List of the Dead</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Action, Comedy, Horror, Supernatural<br>
+                        <b>Plot:</b> An overworked young man creates a bucket list, then zombie outbreak erupt to make him feel like he's finally living.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐7.3/10</div>
+                        <div class="year">2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/erased.jpg" alt="ERASED"></div>
+                <div class="card-content">
+                    <h3 class="card-title">ERASED</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Mystery, Thriller, Supernatural<br>
+                        <b>Plot:</b> A man travels back to his childhood to prevent a series of kidnappings and a tragedy.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.5/10</div>
+                        <div class="year">2016</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/takt.jpg" alt="Takt OP. Destiny"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Takt OP. Destiny</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Action, Fantasy<br>
+                        <b>Plot:</b> Takt, a Conductor, teams up with Unmei, a member of the Musicart, to fight the D2 monsters that plan to wreak havoc on earth by destroying all music.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐6.8/10</div>
+                        <div class="year">2021</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/mob.jpg" alt="Mob Psycho 100"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Mob Psycho 100</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Action, Slice of Life, Comedy, Supernatural<br>
+                        <b>Plot:</b> Kageyama Shigeo, a school boy blessed with supernatural powers, leads an emotionally disturbed life when he realises the dangers of his powers.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.5/10</div>
+                        <div class="year">2016</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/toilet.jpg" alt="Toilet-Bound Hanako-Kun"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Toilet-Bound Hanako-Kun</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Comedy, Supernatural<br>
+                        <b>Plot:</b> Nene yearns for a boyfriend and summons a spirit to grant her wish. Hanako, the ghost, turns out to be the gatekeeper between human and supernatural realms and recruits Nene as his assistant. 
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐7.5/10</div>
+                        <div class="year">2022</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/beyond.jpg" alt="Beyond the Boundary"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Beyond the Boundary</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Romance, Dark fantasy, Supernatural<br>
+                        <b>Plot:</b> High school student Mirai finds that his schoolmate Akihito is an immortal being and half a spirit. When Akihito learns that Mirai is a spirit world warrior their lives become intertwined.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐7.2/10</div>
+                        <div class="year">2013</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/blue.jpg" alt="Blue Exorcist"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Blue Exorcist</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Action, Demons, Fantasy, Shounen, Supernatural<br>
+                        <b>Plot:</b> Humans and demons reside in different realms, Assiah and Gehenna, respectively, that usually don't intersect. But now, demons are starting to enter the tangible world of the human race and must be culled, Thankfully, there are people who can exorcise them. Rin Okumura, a young man of strange origins and exception power, sets out to rid the world of the evil spirit in an effort to be the ultimate exorcist and hero. Accomplishing that would mean defeating his own father. Satan.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.7/10</div>
+                        <div class="year">2021</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="anime-card">
+                <div class="card-image"><img src="images/odd taxi.jpg" alt="Odd Taxi"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Odd Taxi</h3>
+                    <p class="card-description">
+                        <b>Genre:</b> Mystery, Drama<br>
+                        <b>Plot:</b> A taxi driver gets entangled in a missing-person case in a tightly woven, witty noir.
+                    </p>
+                    <div class="card-meta">
+                        <div class="rating">⭐8.7/10</div>
+                        <div class="year">2021</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <!-- Currently Airing Section -->
+    <section class="currently-airing fade-in" id="airing">
+        <div class="airing-container">
+            <h2 class="section-title">🔥 Currently Airing</h2>
+            <p class="section-subtitle">Don't miss the latest episodes of these ongoing series!</p>
+            
+            <div class="airing-grid">
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/dandadan.jpg" alt="Dan da Dan">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dan da Dan</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Action, Supernatural, Sci-Fi, Comedy, Romance, Horror<br>
+                            <b>Plot:</b> A fast-paced supernatural action-comedy about two high school students who get caught up in bizarre paranormal events.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 2</span>
+                                </div>
+                                <span class="episode-number">Episode 18</span>
+                                <span class="airing-status">Next: Aug 14, 2025</span>
+                            </div>
+                            <div class="rating">⭐8.3/10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/blue.jpg" alt="Blue Lock">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Blue Lock</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Sports, Action, Drama<br>
+                            <b>Plot:</b> After Japan's defeat in the World Cup, the Japanese Football Association hires a mysterious coach to create the ultimate striker.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 2</span>
+                                </div>
+                                <span class="episode-number">Episode 24</span>
+                                <span class="airing-status">Next: Jan 18, 2025</span>
+                            </div>
+                            <div class="rating">⭐8.2/10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/stone.jpg" alt="Dr. Stone">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dr. Stone: New World</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Adventure, Sci-Fi, Comedy<br>
+                            <b>Plot:</b> Senku and his friends continue their journey to rebuild civilization using the power of science.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 2</span>
+                                </div>
+                                <span class="episode-number">Episode 11</span>
+                                <span class="airing-status">Next: Jan 19, 2025</span>
+                            </div>
+                            <div class="rating">⭐8.4/10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/seven.jpg" alt="Seven Deadly Sins">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Seven Deadly Sins: Four Knights</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Action, Adventure, Fantasy<br>
+                            <b>Plot:</b> Follows the next generation of heroes as they face new threats in the world of Britannia.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 2</span>
+                                </div>
+                                <span class="episode-number">Episode 8</span>
+                                <span class="airing-status">Next: Jan 21, 2025</span>
+                            </div>
+                            <div class="rating">⭐7.8/10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/summer.jpg" alt="Summer Time Rendering">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">The Summer Hikaru Died</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Mystery, Supernatural, Thriller<br>
+                            <b>Plot:</b> Shinpei returns to his hometown for a funeral, only to discover mysterious deaths and a supernatural conspiracy.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 1</span>
+                                </div>
+                                <span class="episode-number">Episode 6</span>
+                                <span class="airing-status">Next: Aug 15 2025</span>
+                            </div>
+                            <div class="rating">⭐8.6/10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="airing-card">
+                    <div class="airing-badge">Airing</div>
+                    <div class="card-image">
+                        <img src="images/tokyo.jpg" alt="Tokyo Ghoul">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tokyo Ghoul: Re</h3>
+                        <p class="card-description">
+                            <b>Genre:</b> Action, Horror, Drama<br>
+                            <b>Plot:</b> The story continues as Kaneki struggles with his identity and the conflict between humans and ghouls.
+                        </p>
+                        <div class="airing-info">
+                            <div class="episode-info">
+                                <div class="season">
+                                    <span class="season">Season 2</span>
+                                </div>
+                                <span class="episode-number">Episode 12</span>
+                                <span class="airing-status">Next: Jan 22, 2025</span>
+                            </div>
+                            <div class="rating">⭐8.1/10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--section-->
+    <section class="categories fade-in" id="categories">
+        <div class="categories-container">
+            <h2 class="section-title">Browse by Genre</h2>
+            <div class="category-grid">
+                <div class="category-item">
+                    <span class="category-icon">⚔️</span>
+                    <div class="category-name"><a href="action.html" style="color: #ffffff; text-decoration: none;">Action</a></div>
+                    <div class="category-count">1,247 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">💕</span>
+                    <div class="category-name"><a href="romance.html" style="color: #ffffff; text-decoration: none;">Romance</a></div>
+                    <div class="category-count">856 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">👻</span>
+                    <div class="category-name"><a href="horror.html" style="color: #ffffff; text-decoration: none;">👻Horror</a></div>
+                    <div class="category-count">426 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🎓</span>
+                    <div class="category-name"><a href="school.html" style="color: #ffffff; text-decoration: none;">School</a></div>
+                    <div class="category-count">623 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🚀</span>
+                    <div class="category-name"><a href="sci-fi.html" style="color: #ffffff; text-decoration: none;">Sci-fi</a></div>
+                    <div class="category-count">445 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">😂</span>
+                    <div class="category-name"><a href="comedy.html" style="color: #ffffff; text-decoration: none;">Comedy</a></div>
+                    <div class="category-count">789 series</div>                </div>
+                <div class="category-item">
+                    <span class="category-icon">🌍</span>
+                    <div class="category-name"><a href="adventure.html" style="color: #ffffff; text-decoration: none;">Adventure</a></div>
+                    <div class="category-count">345 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🏅</span>
+                    <div class="category-name"><a href="sports.html" style="color: #ffffff; text-decoration: none;">Sports</a></div>
+                    <div class="category-count">648 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🫂</span>
+                    <div class="category-name"><a href="slice-of-life.html" style="color: #ffffff; text-decoration: none;">Slice of Life</a></div>
+                    <div class="category-count">289 series</div>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🪄</span>
+                    <div class="category-name"><a href="magic.html" style="color: #ffffff; text-decoration: none;">Magic</a></div>
+                    <div class="category-count">104 series</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--rankings section-->
+    <section class="rankings fade-in" id="rankings">
+        <div class="rankings-container">
+            <h2 class="section-title">Top Anime Rankings</h2>
+            <div class="rankings-grid">
+                <div class="rankings-list">
+                    <div class="ranking-item">
+                        <div class="ranking-num">#1</div>
+                        <div class="ranking-thumb"><img src="images/attack.jpg" alt="Demon Slayer"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Attack on Titans</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 9.1</span><span class="ranking-year">2013</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#2</div>
+                        <div class="ranking-thumb"><img src="images/jjk.jpg" alt="Jujutsu Kaisen"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Jujutsu Kaisen</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.5</span><span class="ranking-year">2020</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#3</div>
+                        <div class="ranking-thumb"><img src="images/hunter.jpg" alt="Hunter x Hunter"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Hunter x Hunter</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 9.0</span><span class="ranking-year">2022</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#4</div>
+                        <div class="ranking-thumb"><img src="images/piece.jpg" alt="One Piece"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">One Piece</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 9.0</span><span class="ranking-year">2006</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#5</div>
+                        <div class="ranking-thumb"><img src="images/clover.jpg" alt="Black Clover"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Black Clover</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.9</span><span class="ranking-year">2017</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#6</div>
+                        <div class="ranking-thumb"><img src="images/blue.jpg" alt="Blue Lock"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Blue Lock</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.2</span><span class="ranking-year">2022</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#7</div>
+                        <div class="ranking-thumb"><img src="images/stone.jpg" alt="Dr. Stone"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Dr. Stone</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.4</span><span class="ranking-year">2019</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#8</div>
+                        <div class="ranking-thumb"><img src="images/summer.jpg" alt="The Summer Hikaru Died"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">The Summer Hikaru Died</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.6</span><span class="ranking-year">2025</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#9</div>
+                        <div class="ranking-thumb"><img src="images/tokyo.jpg" alt="Tokyo Ghoul"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Tokyo Ghoul:re</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 8.1</span><span class="ranking-year">2018</span></div>
+                        </div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-num">#10</div>
+                        <div class="ranking-thumb"><img src="images/hunter.jpg" alt="Hunter x Hunter"></div>
+                        <div class="ranking-info">
+                            <div class="ranking-title">Hunter x Hunter</div>
+                            <div class="ranking-meta"><span class="ranking-score">⭐ 9.0</span><span class="ranking-year">2011</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="personal-review">
+                    <h3>My Personal Review</h3>
+                    <div class="review-card">
+                        <div class="review-thumb"><img src="images/dress-up.jpg" alt="My Dress-up Darling"></div>
+                        <div class="review-content">
+                            <div class="review-title">My Dress-up Darling</div>
+                            <div class="review-meta"><span class="review-score">⭐ 7.9/10</span><span class="review-year">2022</span></div>
+                            <div class="review-tags">
+                                <span class="tag">Romance</span>
+                                <span class="tag">School</span>
+                                <span class="tag">Slice of Life</span>
+                            </div>
+                            <p class="review-text">The best romance anime i've seen in my life. The stoty was cute but it also had some profound messages that hit home with me. I enjiyed watching the characters grow as well as seeing them learn from their mistakes.</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-thumb"><img src="images/demon.jpg" alt="Demon Slayer"></div>
+                        <div class="review-content">
+                            <div class="review-title">Jujutsu Kaisen</div>
+                            <div class="review-meta"><span class="review-score">⭐ 9/10</span><span class="review-year">2020</span></div>
+                            <div class="review-tags">
+                                <span class="tag">Action</span>
+                                <span class="tag">Supernatural</span>
+                                <span class="tag">Adventure</span>
+                            </div>
+                            <p class="review-text">Demon Slayer is undoubtedly one of the most compelling and breathtaking anime series that has graced our screens in recent years. With its visually stunning animation, engaging storyline, and lovable characters, it has captivated audiences across the globe.</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-thumb"><img src="images/jjk.jpg" alt="Jujutsu Kaisen"></div>
+                        <div class="review-content">
+                            <div class="review-title">Jujutsu Kaisen</div>
+                            <div class="review-meta"><span class="review-score">⭐ 9/10</span><span class="review-year">2020</span></div>
+                            <div class="review-tags">
+                                <span class="tag">Action</span>
+                                <span class="tag">Supernatural</span>
+                                <span class="tag">Drama</span>
+                            </div>
+                            <p class="review-text">Stunning fights and tight pacing with lovable characters. The choreography and sound design make every battle feel impactful. Gojo steals the show, but Yuji's growth keeps the heart of the story strong.</p>
+                            
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!--stats-->
+
+    <section class="stats fade-in" id="stats">
+        <div class="stats-container">
+            <h2 class="section-title">Join Our Growing Community</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">15,000+</span>
+                    <span class="stat-label">Anime Series</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2.5M</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500K</span>
+                    <span class="stat-label">Reviews</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--community section-->
+    
+    <section class="community fade-in" id="community">
+        <div class="community-container">
+            <h2 class="section-title">Community Recommendations</h2>
+            <p class="section-subtitle">Share your favorite anime and discover new ones from fellow fans!</p>
+            
+            <!-- Recommendation Form -->
+            <div class="recommendation-form">
+                <h3>Share Your Recommendation</h3>
+                <form id="recommendationForm">
+                    <div class="form-group">
+                        <label for="animeName">Anime Title *</label>
+                        <input type="text" id="animeName" name="animeName" required placeholder="Enter anime title...">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="genre">Genre</label>
+                            <select id="genre" name="genre" style="background-color: #333;">
+                                <option value="">Select Genre</option>
+                                <option value="Action">Action</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Horror">Horror</option>
+                                <option value="Sci-fi">Sci-fi</option>
+                                <option value="Fantasy">Fantasy</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Thriller">Thriller</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rating">Your Rating</label>
+                            <select id="rating" name="rating" style="background-color: #333;">
+                                <option value="">Select Rating</option>
+                                <option value="10">10 - Masterpiece</option>
+                                <option value="9">9 - Excellent</option>
+                                <option value="8">8 - Very Good</option>
+                                <option value="7">7 - Good</option>
+                                <option value="6">6 - Fine</option>
+                                <option value="5">5 - Average</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recommendation">Why do you recommend it? *</label>
+                        <textarea id="recommendation" name="recommendation" required placeholder="Share what makes this anime special... (min. 50 characters)" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="username">Your Name (Optional)</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your name...">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Share Recommendation</button>
+                </form>
+            </div>
+            
+            <!-- Recommendations Display -->
+            <div class="recommendations-display">
+                <h3>Recent Community Recommendations</h3>
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <!-- Recommendations will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Animeverse</h3>
+                <p style="color: #666; line-height: 1.6;">Your ultimate destination for anime discovery, reviews, and community. Join millions of fans worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Browse</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Popular Anime</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Top Rated</a></li>
+                    <li><a href="#">Genres</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Owami Wandile Thabethe. All rights reserved. Made with love for anime fans worldwide</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
